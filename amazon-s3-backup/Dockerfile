@@ -31,8 +31,8 @@ LABEL \
     org.opencontainers.image.vendor="Home Assistant Community Add-ons" \
     org.opencontainers.image.authors="Greg Rapp <gdrapp@gmail.com>" \
     org.opencontainers.image.licenses="MIT" \
-    org.opencontainers.image.url="https://github.com/gdrapp/hass-addons     " \
-    org.opencontainers.image.source="https://github.com/gdrapp/hass-addons" \
+    org.opencontainers.image.url="https://github.com/stuartornum/hass-addons     " \
+    org.opencontainers.image.source="https://github.com/stuartornum/hass-addons" \
     org.opencontainers.image.documentation="https://github.com/hass-addons/amazon-s3-backup/blob/master/README.md" \
     org.opencontainers.image.created=${BUILD_DATE} \
     org.opencontainers.image.revision=${BUILD_REF} \
