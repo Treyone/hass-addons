@@ -53,7 +53,8 @@ class S3Bucket:
         Args:
             file (str): Full path of file to upload
         """
-        key = file.lstrip("/")
+#         key = file.lstrip("/")
+        key = metadata["name"]
         extra_args = {}
         extra_args["StorageClass"] = self.storage_class
         
