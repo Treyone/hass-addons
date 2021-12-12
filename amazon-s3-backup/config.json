@@ -3,7 +3,7 @@
     "version": "1.1",
     "slug": "amazon-s3-backup",
     "description": "Automatically backup Home Assistant snapshots to Amazon S3",
-    "url": "https://github.com/stuartornum/hass-addons",
+    "url": "https://github.com/scottg489/hass-addons",
     "startup": "application",
     "init": false,
     "arch": [
