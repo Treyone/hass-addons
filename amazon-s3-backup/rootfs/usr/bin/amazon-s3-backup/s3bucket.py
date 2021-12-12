@@ -56,10 +56,21 @@ class S3Bucket:
         key = file.lstrip("/")
         extra_args = {}
         extra_args["StorageClass"] = self.storage_class
+        
+        logger.warning(f"asdf - key: {key}")
+        logger.warning(f"asdf - extra_args: {extra_args}")
+        
         if metadata is not None:
             extra_args["Metadata"] = metadata
-
+            
+        logger.warning(f"asdf - extra_args: {extra_args}")
+        
         try:
+            logger.warning(f"asdf - file: {file}")
+            logger.warning(f"asdf - self.bucket_name: {self.bucket_name}")
+            logger.warning(f"asdf - key: {key}")
+            logger.warning(f"asdf - extra_args: {extra_args}")
+            
             logger.info(f"Uploading file [{file}] to S3")
             self.s3_client.upload_file(Filename=file,
                                        Bucket=self.bucket_name,
