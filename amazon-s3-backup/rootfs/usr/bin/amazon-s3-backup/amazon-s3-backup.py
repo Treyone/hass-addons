@@ -195,12 +195,12 @@ if __name__ == "__main__":
                     logger.exception(f"Error uploading file: {err}")
         else:
             logger.warning(
-                f"Local file {file} not found in S3")
+                f"test - Local file {file} not found in S3")
             if config.upload_missing_files:
                 try:
-                    logger.critical(f"asdf - file: {file}")
-                    logger.critical(f"asdf - s3_bucket: {s3_bucket}")
-                    logger.critical(f"asdf - supervisor_api: {supervisor_api}")
+                    logger.warning(f"asdf - file: {file}")
+                    logger.warning(f"asdf - s3_bucket: {s3_bucket}")
+                    logger.warning(f"asdf - supervisor_api: {supervisor_api}")
                     upload_file(file, s3_bucket, supervisor_api)
                 except S3BucketError as err:
                     logger.exception(f"Error uploading file: {err}")
