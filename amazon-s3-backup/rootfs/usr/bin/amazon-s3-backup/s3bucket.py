@@ -61,7 +61,7 @@ class S3Bucket:
         if metadata is not None:
             extra_args["Metadata"] = metadata
             
-        logger.warning(f"asdf - extra_args: {extra_args}")
+        logger.info(f"Extra_args: {extra_args}")
         
         try:
             logger.info(f"Uploading file [{file}] to S3")
