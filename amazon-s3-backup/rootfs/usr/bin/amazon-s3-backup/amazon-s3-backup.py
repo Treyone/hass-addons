@@ -180,8 +180,10 @@ if __name__ == "__main__":
     for local_file in local_files:
         file = Path(config.monitor_path, local_file)
         file_size = file.stat().st_size
+        logger.debug(f"Bucket contents: {bucket_contents}") 
         found_in_s3 = [f for f in bucket_contents if f.get(
             "name") == str(file).lstrip("/")]
+        logger.debug(f"Found in S3: {found_in_s3}") 
         if len(found_in_s3) > 0:
             if file_size == found_in_s3[0]["size"]:
                 logger.debug(
