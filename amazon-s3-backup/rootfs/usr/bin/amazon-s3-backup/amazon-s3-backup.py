@@ -182,7 +182,7 @@ if __name__ == "__main__":
         file_size = file.stat().st_size
         logger.debug(f"Bucket contents: {bucket_contents}") 
         found_in_s3 = [f for f in bucket_contents if f.get(
-            "name") == str(file).lstrip("/")]
+            "name") == str(supervisor_api.get_snapshot(file.stem)["name"])]
         logger.debug(f"Found in S3: {found_in_s3}") 
         if len(found_in_s3) > 0:
             if file_size == found_in_s3[0]["size"]:
