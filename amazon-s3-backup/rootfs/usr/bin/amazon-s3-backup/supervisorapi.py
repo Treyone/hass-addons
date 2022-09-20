@@ -84,7 +84,7 @@ class SupervisorAPI:
             dict: Dictionary containing snapshot details
         """
         response = self._get(f"/backups/{slug}/info")
-        return response.get("data")
+        return response.get("data") if response is not None else {"Name":""}
 
     def remove_snapshot(self, slug: str) -> bool:
         """Delete a snapshot
